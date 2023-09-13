@@ -1,29 +1,29 @@
-function showTime(){
-    var date = new Date();
-    var h = date.getHours(); // 0 - 23
-    var m = date.getMinutes(); // 0 - 59
-    var s = date.getSeconds(); // 0 - 59
-    var session = "AM";
-    
-    if(h == 0){
-        h = 12;
-    }
-    
-    if(h > 12){
-        h = h - 12;
-        session = "PM";
-    }
-    
-    h = (h < 10) ? "0" + h : h;
-    m = (m < 10) ? "0" + m : m;
-    s = (s < 10) ? "0" + s : s;
-    
-    var time = h + ":" + m + ":" + s + " " + session;
-    document.getElementById("MyClockDisplay").innerText = time;
-    document.getElementById("MyClockDisplay").textContent = time;
-    
-    setTimeout(showTime, 1000);
-    
+let date = new Date();
+
+console.log(date)
+
+
+let clock = () => {
+    let date = new Date();
+    let hrs = date.getHours();
+    let mins = date.getMinutes();
+    let secs = date.getSeconds();
+    let time = `${hrs}:${mins}:${secs}`
+    // log the time in console
+    console.log(time)
+  }
+  // call the clock function
+  clock();
+
+
+  let period = "AM";
+if (hrs == 0) hrs = 12;
+
+if (hrs > 12) {	    
+	hrs = hrs - 12;	    
+	period = "PM";	  
 }
 
-showTime();
+hrs = hrs < 10 ? `0${hrs}` : hrs;
+mins = mins < 10 ? `0${mins}` : mins;
+secs = secs < 10 ? `0${secs}` : secs;
