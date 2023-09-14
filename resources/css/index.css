@@ -8,8 +8,8 @@ body {
 #clock {
 	height: 100vh;
 	width: 100%;
-	background-color: #14080e;
-	color: #e9eb9e;
+	background-color: #000000;
+	color: #39A2BF;
 	display: flex;
 	align-items: center;
 	justify-content: center;
